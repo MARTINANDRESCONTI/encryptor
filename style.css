@@ -1,0 +1,191 @@
+*{
+  box-sizing: border-box;
+  
+  
+}
+
+:root {
+  --fontPoppins: 'Poppins', sans-serif;
+  --fontQuantico: 'Quantico', sans-serif;
+  --fontCode: 'Source Code Pro', monospace;
+  --appWhite: #f2f2f2;
+  --appVeige: #fef4e8;
+  --appBrown: #D7C0AE;
+  --appRed:   #a90041;
+  --appBlack: #100006; 
+  
+}
+
+section {
+  padding: 20px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--appVeige);
+  font-family: var(--fontPoppins);
+}
+
+.container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 570px;
+  width: 800px;
+  background-color: var(--appWhite);
+  border: 2px solid var(--appBrown);
+  border-radius: 15px;
+}
+
+.logo-container {
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 10%;
+}
+
+img {
+  height: 50px;
+  margin: 20px 0px 0px 10px; 
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 55%;
+}
+
+.text-input {
+  height:450px;
+  width: 400px;
+  background-color:  #f2f2f2;
+  padding: 10px;
+  border: 0px;
+  display:flex;
+  flex-direction: inherit;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  font-family: var(--fontQuantico);
+  
+  
+}
+
+.button-container{
+  display: flex;
+  
+}
+
+.button-encrypt {
+  width: 150px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: var(--appBrown);
+  box-shadow: 3px 1px 5px gray;
+  cursor: pointer;
+  font-family: var(--fontPoppins);
+  font-size: large;
+  font-weight: bold;
+  color: var(--appBlack);
+  margin-right: 5px;
+  border: none;
+  
+}
+
+.button-encrypt:hover {
+  background-color: var(--appVeige);
+}
+
+.button-unencrypt {
+  width: 150px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: var(--appRed);
+  box-shadow: 3px 1px 5px gray;
+  cursor: pointer;
+  font-family: var(--fontPoppins);
+  font-size: large;
+  font-weight: bold;
+  color: var(--appWhite);
+  margin-left: 5px;
+  border: none;
+}
+
+.button-unencrypt:hover {
+  background-color: var(--appBlack);
+}
+
+.output-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 35%;
+}
+
+.output-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:450px;
+  width: 240px;
+  background-color: #f2f2f2;
+  
+}
+
+.text-output {
+  height:450px;
+  width: 220px;
+  background-color:  var(--appWhite);
+  padding: 10px;
+  border: 0px;
+  margin-bottom: 10px;
+  font-family: var(--fontQuantico);
+  display: none;
+  word-break: break-word;
+
+}
+
+.logo-output {
+  height: 200px;
+  animation: loader 3s alternate infinite;
+  
+}
+
+@keyframes loader {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    border-radius: 50%;
+    rotate: 90deg;
+  }
+}
+
+
+.button-copy {
+  border: none;
+  width: 150px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: var(--appBrown);
+  box-shadow: 3px 1px 5px gray;
+  cursor: pointer;
+  font-family: var(--fontPoppins);
+  font-size: large;
+  font-weight: bold;
+  color: var(--appBlack);
+}
+
+.button-copy:hover {
+  background-color: var(--appVeige);
+}
