@@ -83,13 +83,25 @@ function copy(){
 //   document.getElementById('text-input').value = textOutputContainer;
 //   document.getElementsByTagName("p")[0].innerHTML = ''
 
+      let del = 0
   
 
+      // textOutputContainer = document.querySelector("p").innerText
+      textOutputContainer = document.getElementsByTagName("p")//[0].innerText
+      console.log (textOutputContainer[textOutputContainer.length -1].innerText)
+      // document.getElementById('text-input').value = textOutputContainer;
+      // document.querySelector("p").innerText = ''
+   
+      document.getElementById('text-input').value = textOutputContainer[textOutputContainer.length -1].innerText;
+ 
 
-   textOutputContainer = document.querySelector("p").innerText
-   console.log (textOutputContainer)
-   document.getElementById('text-input').value = textOutputContainer;
-   document.querySelector("p").innerText = ''
+      document.querySelectorAll("p")[0].innerText = ''
+      del++
+
+      // deleteinput = document.querySelector("p")
+      //    document.querySelector("p")[0].innerText = ''
+      
+      console.log(textOutputContainer)
 
  
 
