@@ -28,10 +28,12 @@ function encrypt(){
 
    paragraphtext = document.createElement("p")
    paragraphtext.innerText = text
+   paragraphtext.setAttribute('class', 'p')
    textOutputContainer.appendChild(paragraphtext) 
    
    }  
    document.getElementById('text-input').value = "";
+   console.log(textOutputContainer)
 };
 
 
@@ -70,47 +72,6 @@ function unencrypt(){
    document.getElementById('text-input').value = "";
 };
 
-function copyeee(){
-//   textOutputContainer = document.getElementsByTagName("p")[0].innerText
-//   console.log (textOutputContainer)
-//   document.getElementById('text-input').value = textOutputContainer;
-//   document.getElementsByTagName("p")[0].innerHTML = ''
-
-      let del = 0
-  
-
-      // textOutputContainer = document.querySelector("p").innerText
-      textOutputContainer = document.getElementsByTagName("p")//[0].innerText
-      console.log (textOutputContainer[textOutputContainer.length -1].innerText)
-      // document.getElementById('text-input').value = textOutputContainer;
-      // document.querySelector("p").innerText = ''
-   
-      document.getElementById('text-input').value = textOutputContainer[textOutputContainer.length -1].innerText;
- 
-
-      document.querySelectorAll("p")[0].innerText = ''
-      del++
-
-      // deleteinput = document.querySelector("p")
-      //    document.querySelector("p")[0].innerText = ''
-      
-      console.log(textOutputContainer)
-
-      // logoOutput = document.getElementById('logo-output')
-      // logoOutput.style.display = 'flex' 
-
- 
-
- 
-
-
-//   text = document.getElementById('text-input')
-  
-//   text.innerText =textOutputContainer
-//   text.appendChild(textOutputContainer)  
-//   document.getElementById('text-output') = "";
-  
-};
 const copy = async () => {
    textOut = document.querySelectorAll("p")[0].innerText
     try {
@@ -119,15 +80,17 @@ const copy = async () => {
     } catch (err) {
       console.error('Error al copiar: ', err);
     }
+    console.log(document.getElementsByTagName("p"))
   }
 
 function del(){
-   textOutputContainer = document.getElementById('text-output')
-   textOutputContainer.style.display = 'none'
-   document.querySelectorAll("p")[0].innerText = ''
-   logoOutput = document.getElementById('logo-output')
-   logoOutput.style.display = 'flex'  
-
+  textOut = document.getElementById('text-output')
+  console.log(textOut)  
+  textOut.removeChild(textOut.firstElementChild)
+  textOutputContainer = document.getElementById('text-output')
+  textOutputContainer.style.display = 'none'
+  logoOutput = document.getElementById('logo-output')
+  logoOutput.style.display = 'flex'  
 }
 
 
