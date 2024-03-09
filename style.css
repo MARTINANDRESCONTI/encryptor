@@ -1,7 +1,7 @@
 *{
   box-sizing: border-box;
-  
-  
+  font-family: 'Poppins', sans-serif; 
+  margin: 0;
 }
 
 :root {
@@ -16,98 +16,136 @@
   
 }
 
-section {
-  padding: 20px;
-}
-
 body {
+  height: 100vh;
+  width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--appVeige);
+  background-color: var(--appRed);
   font-family: var(--fontPoppins);
 }
 
+.background {
+  height: 100vh;
+  width: 100vw;
+  border-radius: 15px;
+  background-image: url('./ximage.jpg');
+  background-repeat: none;
+  background-size: cover;
+  position: absolute; 
+  
+  /* opacity: 0.5;  
+  position: relative; */
+}
+
+.mask {
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(4px);  
+  background-color: rgba(240, 248, 255, 0.184)
+}
+
 .container {
+  position: absolute;
+  top:10%;
+  left: 10%;
+  background-color: rgba(255, 0, 0, 0.278) !important;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 570px;
-  width: 800px;
-  background-color: var(--appWhite);
-  border: 2px solid var(--appBrown);
+  height: 80%;
+  width: 80%;
+  background-color: transparent;
+  border: 3px solid var(--appWhite);
   border-radius: 15px;
+  opacity: none;
+  flex: 1;
 }
 
-.logo-container {
-  background-color: #f2f2f2;
-  height: 100%;
-  width: 10%;
-}
-
-img {
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.726);
   height: 50px;
-  margin: 20px 0px 0px 10px; 
+  width: 50px;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 .input-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #f2f2f2;
+  justify-content: space-around;
+  /* background-color: yellow; */
   height: 100%;
   width: 55%;
 }
 
 .text-input {
-  height:450px;
-  width: 400px;
-  background-color:  #f2f2f2;
+  height:400px;
+  width: 500px;
+  background-color:  transparent;
   padding: 10px;
   border: 0px;
   display:flex;
   flex-direction: inherit;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: 10px;
-  font-family: var(--fontQuantico);
-  
+  font-family: var(--fontPoppins);
+  color: white; 
+  font-size: 20px; 
+  font-weight: bold;  
+}
+
+::placeholder {
+  font-family: var(--fontPoppins);
+  color: white;
+  font-size: 25px; 
+  font-weight: bold; 
   
 }
 
 .button-container{
-  display: flex;
-  
+  width: 400px;
+  display: flex; 
+  justify-content: space-around; 
 }
 
-.button-encrypt {
-  width: 150px;
+.button-encrypt,
+.button-copy {
+  width: min-content;
   height: 35px;
   border-radius: 50px;
-  background-color: var(--appBrown);
-  box-shadow: 3px 1px 5px gray;
+  background-color: var(--appBlack);
+  box-shadow: 5px 3px 7px white;
   cursor: pointer;
   font-family: var(--fontPoppins);
   font-size: large;
   font-weight: bold;
-  color: var(--appBlack);
+  color: white;
   margin-right: 5px;
-  border: none;
-  
+  border: none;  
+  padding: 0px 30px;
 }
 
-.button-encrypt:hover {
-  background-color: var(--appVeige);
+.button-encrypt:hover,
+.button-copy:hover  {
+  background-color: #100006b4 ;
+  color: var(--appVeige) ;
 }
 
-.button-unencrypt {
-  width: 150px;
+.button-unencrypt,
+.button-delete {
+  width: min-content;
   height: 35px;
   border-radius: 50px;
   background-color: var(--appRed);
-  box-shadow: 3px 1px 5px gray;
+  box-shadow: 5px 3px 7px white;
   cursor: pointer;
   font-family: var(--fontPoppins);
   font-size: large;
@@ -115,18 +153,20 @@ img {
   color: var(--appWhite);
   margin-left: 5px;
   border: none;
+  padding: 0px 30px;
 }
 
-.button-unencrypt:hover {
-  background-color: var(--appBlack);
+.button-unencrypt:hover,
+.button-delete:hover {
+  background-color: #a90041b4;
 }
 
 .output-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #f2f2f2;
+  justify-content: space-around;
+  background-color: transparent;
   height: 100%;
   width: 35%;
 }
@@ -136,23 +176,24 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height:450px;
-  width: 240px;
-  background-color: #f2f2f2;
-  
+  height:400px;
+  width: 340px;
 }
 
 .text-output {
-  height:450px;
-  width: 220px;
-  background-color:  var(--appWhite);
+  width: 100%;
+  height: 100%;
+  background-color: #a90041b9;
   padding: 10px;
   border: 0px;
   margin-bottom: 10px;
-  font-family: var(--fontQuantico);
+  font-family: var(--fontPoppins);
+  color: white; 
+  font-size: 20px; 
+  font-weight: bold;  
   display: none;
   word-break: break-word;
-
+  border-radius: 5px;
 }
 
 .logo-output {
@@ -172,20 +213,5 @@ img {
 }
 
 
-.button-copy {
-  border: none;
-  width: 150px;
-  height: 35px;
-  border-radius: 50px;
-  background-color: var(--appBrown);
-  box-shadow: 3px 1px 5px gray;
-  cursor: pointer;
-  font-family: var(--fontPoppins);
-  font-size: large;
-  font-weight: bold;
-  color: var(--appBlack);
-}
-
-.button-copy:hover {
-  background-color: var(--appVeige);
-}
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/trash.css');
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/copy.css');

@@ -103,6 +103,9 @@ function copy(){
       
       console.log(textOutputContainer)
 
+      // logoOutput = document.getElementById('logo-output')
+      // logoOutput.style.display = 'flex' 
+
  
 
  
@@ -116,5 +119,13 @@ function copy(){
   
 };
 
+function del(){
+   textOutputContainer = document.getElementById('text-output')
+   textOutputContainer.style.display = 'none'
+   document.querySelectorAll("p")[0].innerText = ''
+   logoOutput = document.getElementById('logo-output')
+   logoOutput.style.display = 'flex'  
+
+}
 
 
