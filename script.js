@@ -2,7 +2,7 @@ function encrypt(){
   let text = document.getElementById('text-input').value        
   
   if(!text){
-     return alert("Writte your text!")
+     return alert("Writte your text")
    } else {
       text = text.split('').map(e => { 
          // let replaceVocal = (vocal, replacer) => {
@@ -56,7 +56,7 @@ function unencrypt(){
   }
 
    if(!text){
-      return alert("Writte some thin! Asshoul...")
+      return alert("Writte your text")
    }else {
       findReplace('enter', 'e')
       findReplace('imes', 'i')
