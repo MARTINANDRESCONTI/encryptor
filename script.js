@@ -1,9 +1,14 @@
 function encrypt(){
-  let text = document.getElementById('text-input').value        
+  let text = document.getElementById('text-input').value 
+  foo = document.getElementById('text-output')
+   
   
   if(!text){
     return alert("Writte your text")
     }else {
+      if(foo.hasChildNodes()){
+      clean()
+      }     
       text = text.split('').map(e => { 
       if(e === 'e'){
       return e.replace('e', 'enter');
@@ -35,14 +40,22 @@ function encrypt(){
    document.getElementById('text-input').value = "";
    console.log(textOutputContainer)
 };
-
+function clean (){  
+  textOut = document.getElementById('text-output')
+  textOut.removeChild(textOut.firstElementChild)
+    
+}
 
 function unencrypt(){
   let text = document.getElementById('text-input').value
+  foo = document.getElementById('text-output')
 
   if(!text){
       return alert("Writte your text")
   }else {
+      if(foo.hasChildNodes()){
+      clean()
+      }    
       let textArray = text.split('')
       for(let i = 0; i < textArray.length; i++){
         if(textArray[i] == 'e'){
