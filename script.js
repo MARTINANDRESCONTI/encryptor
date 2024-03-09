@@ -2,22 +2,9 @@ function encrypt(){
   let text = document.getElementById('text-input').value        
   
   if(!text){
-     return alert("Writte your text")
-   } else {
+    return alert("Writte your text")
+    }else {
       text = text.split('').map(e => { 
-         // let replaceVocal = (vocal, replacer) => {
-         //    if(e === vocal){
-         //    return e.replace(vocal, replacer);
-         //    } 
-         // }
-
-         // replaceVocal('e', 'enter')
-         // replaceVocal('i', 'imes')
-         // replaceVocal('a', 'ai')
-         // replaceVocal('o', 'ober')
-         // replaceVocal('u', 'ufat')
-         // return e
-
       if(e === 'e'){
       return e.replace('e', 'enter');
       }else if(e === 'i'){
@@ -50,19 +37,25 @@ function encrypt(){
 
 function unencrypt(){
   let text = document.getElementById('text-input').value
-  let findReplace = (encript, desencript) => {
-      for(let i = 0; i < text.length; i++){
-      text = text.replace(encript, desencript)}
-  }
 
-   if(!text){
+  if(!text){
       return alert("Writte your text")
-   }else {
-      findReplace('enter', 'e')
-      findReplace('imes', 'i')
-      findReplace('ai', 'a')
-      findReplace('ober', 'o')
-      findReplace('ufat', 'u')
+  }else {
+      let textArray = text.split('')
+      for(let i = 0; i < textArray.length; i++){
+        if(textArray[i] == 'e'){
+          textArray.splice(i+1, 4)
+        }else if(textArray[i] == 'i'){
+          textArray.splice(i+1, 3)
+        }else if(textArray[i] == 'a'){
+          textArray.splice(i+1, 1)
+        }else if(textArray[i] == 'o'){
+          textArray.splice(i+1, 3)
+        }else if(textArray[i] == 'u'){
+          textArray.splice(i+1, 3)
+        }
+      }
+        text = textArray.join('')
 
    logoOutput = document.getElementById('logo-output')
    logoOutput.style.display = 'none'  
@@ -77,7 +70,7 @@ function unencrypt(){
    document.getElementById('text-input').value = "";
 };
 
-function copy(){
+function copyeee(){
 //   textOutputContainer = document.getElementsByTagName("p")[0].innerText
 //   console.log (textOutputContainer)
 //   document.getElementById('text-input').value = textOutputContainer;
@@ -118,6 +111,15 @@ function copy(){
 //   document.getElementById('text-output') = "";
   
 };
+const copy = async () => {
+   textOut = document.querySelectorAll("p")[0].innerText
+    try {
+      await navigator.clipboard.writeText(textOut);
+      console.log('Contenido copiado al portapapeles');
+    } catch (err) {
+      console.error('Error al copiar: ', err);
+    }
+  }
 
 function del(){
    textOutputContainer = document.getElementById('text-output')
