@@ -31,7 +31,7 @@ body {
   height: 100vh;
   width: 100vw;
   border-radius: 15px;
-  background-image: url('./ximage.jpg');
+  background-image: url('./image/ximage.jpg');
   background-repeat: none;
   background-size: cover;
   position: absolute; 
@@ -135,8 +135,9 @@ body {
 
 .button-encrypt:hover,
 .button-copy:hover  {
-  background-color: #100006b4 ;
-  color: var(--appVeige) ;
+  /* background-color: #100006b6 ; */
+  /* color: var(--appVeige) ; */
+  box-shadow: none;
 }
 
 .button-unencrypt,
@@ -158,7 +159,38 @@ body {
 
 .button-unencrypt:hover,
 .button-delete:hover {
-  background-color: #a90041b4;
+  /* background-color: #a90041b6; */
+  box-shadow: none;
+}
+
+.arrow-paste{
+  width: 35px;
+  height: 55px;
+  border-radius: 50px;
+  background-color: var(--appWhite);
+  border: solid 3px var(--appBrown);
+  cursor: pointer;
+  font-family: var(--fontPoppins);
+  font-size: large;
+  font-weight: bold;
+  color: var(--appWhite);
+  margin-left: 5px;  
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5ms;
+}
+
+.arrow-paste:hover{
+  background-color: transparent;
+}
+
+.arrow,
+.paste {
+  height: 20px;
+  width: 20px;
 }
 
 .output-container {

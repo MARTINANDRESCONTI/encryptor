@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+   <link rel="icon" href="./image/martinIcon.svg" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +19,7 @@
       <div class="container">
         <!-- <div class="logo-container"> -->
         <a href='https://martin-conti-portfolio.vercel.app/' target='_blank'>
-          <img src="./martinIcon.svg" class="logo">
+          <img src="./image/martinIcon.svg" class="logo">
         </a>
         <!-- </div>   -->
         <div class="input-container">
@@ -29,9 +30,13 @@
             <button id="unencrypter-button" class="button-unencrypt" onclick="unencrypt()">Unencrypt</button>
           </div>
         </div>
+        <div class="arrow-paste" onclick="arrowPaste()">
+          <img src="./image/paste.png" class="paste">
+          <img src="./image/arrow-left.svg" class="arrow">
+        </div>
         <div class="output-container">
           <div class="output-text-container">
-            <img src="./martinIcon.svg" id="logo-output" class="logo-output">
+            <img src="./image/martinIcon.svg" id="logo-output" class="logo-output">
             <div id="text-output" class="text-output"></div>
           </div>
           <div class="button-container">
@@ -41,7 +46,7 @@
         </div>
       </div>
       <a href='https://github.com/MARTINANDRESCONTI' target='_blank'>
-        <img src="./github.png" class="github">
+        <img src="./image/github.png" class="github">
       </a>
 
     </div>

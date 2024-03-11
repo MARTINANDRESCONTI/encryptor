@@ -38,12 +38,17 @@ function encrypt(){
    
    }  
    document.getElementById('text-input').value = "";
-   console.log(textOutputContainer)
 };
+
 function clean (){  
   textOut = document.getElementById('text-output')
-  textOut.removeChild(textOut.firstElementChild)
-    
+  textOut.removeChild(textOut.firstElementChild)    
+}
+
+function arrowPaste (){
+  textOut = document.querySelectorAll("p")[0].innerText  
+  document.getElementById('text-input').value = textOut  
+  clean()
 }
 
 function unencrypt(){
@@ -93,12 +98,10 @@ const copy = async () => {
     } catch (err) {
       console.error('Error al copiar: ', err);
     }
-    console.log(document.getElementsByTagName("p"))
   }
 
 function del(){
   textOut = document.getElementById('text-output')
-  console.log(textOut)  
   textOut.removeChild(textOut.firstElementChild)
   textOutputContainer = document.getElementById('text-output')
   textOutputContainer.style.display = 'none'
