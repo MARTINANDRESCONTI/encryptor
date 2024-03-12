@@ -176,12 +176,11 @@ textarea {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: width, heigth, background-color 500ms;
+  transition: width 500ms, background-color 500ms;
 }
 
 .arrow-paste:hover{
   width: 72px;
-  height: 72px;
   background-color: transparent;
 }
 
@@ -334,9 +333,9 @@ textarea {
 
   .arrow-paste{
     width: 80px;
-    height: 60px;
+    height: 40px;
     flex-direction: row;
-    transition: width 500ms, heigth 500ms, background-color 500ms;
+    transition: width 500ms, background-color 500ms;
     gap: 5px;
   }
 
@@ -350,7 +349,6 @@ textarea {
 
   .arrow-paste:hover{
     width: 84px;
-    height: 64px;
     background-color: transparent;
   }
 
@@ -412,14 +410,6 @@ textarea {
     font-size: 16px;
     height: 30px;
     padding: 0px 20px;
-  }
-
-  .arrow-paste{
-    height: 40px;
-  }
-
-  .arrow-paste:hover{
-    height: 64px;
   }
 
   .arrow,
