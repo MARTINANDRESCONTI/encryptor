@@ -35,9 +35,6 @@ body {
   background-repeat: none;
   background-size: cover;
   position: absolute; 
-  
-  /* opacity: 0.5;  
-  position: relative; */
 }
 
 .mask {
@@ -48,6 +45,8 @@ body {
 }
 
 .container {
+  height: 80%;
+  width: 80%;
   position: absolute;
   top:10%;
   left: 10%;
@@ -56,8 +55,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
-  width: 80%;
   background-color: transparent;
   border: 3px solid var(--appWhite);
   border-radius: 15px;
@@ -81,7 +78,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 100%;
+  height: 90%;
   width: 50%;
 }
 
@@ -90,8 +87,8 @@ textarea {
 }
 
 .text-input {
-  height:400px;
-  width: 450px;
+  height: 90%;
+  width: 80%;
   background-color:  transparent;
   padding: 10px;
   border: solid 1px rgba(255, 255, 255, 0.503);
@@ -114,7 +111,7 @@ textarea {
 }
 
 .button-container{
-  width: 400px;
+  width: 100%;
   display: flex; 
   justify-content: space-evenly; 
 }
@@ -131,15 +128,12 @@ textarea {
   font-size: large;
   font-weight: bold;
   color: white;
-  /* margin-right: 5px; */
   border: none;  
-  padding: 0px 30px;
+  padding: 0px 20px;
 }
 
 .button-encrypt:hover,
 .button-copy:hover  {
-  /* background-color: #100006b6 ; */
-  /* color: var(--appVeige) ; */
   box-shadow: none;
 }
 
@@ -155,20 +149,18 @@ textarea {
   font-size: large;
   font-weight: bold;
   color: var(--appWhite);
-  /* margin-left: 5px; */
   border: none;
-  padding: 0px 30px;
+  padding: 0px 20px;
 }
 
 .button-unencrypt:hover,
 .button-delete:hover {
-  /* background-color: #a90041b6; */
   box-shadow: none;
 }
 
 .arrow-paste-container{
+  height: 90%;  
   width: 10%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,7 +201,7 @@ textarea {
   align-items: center;
   justify-content: space-around;
   background-color: transparent;
-  height: 100%;
+  height: 90%;
   width: 30%;
 }
 
@@ -218,8 +210,8 @@ textarea {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height:400px;
-  width: 300px;
+  height: 90%;
+  width: 90%;
 }
 
 .text-output {
@@ -239,7 +231,7 @@ textarea {
 }
 
 .logo-output {
-  height: 200px;
+  height: 130px;
   animation: loader 3s alternate infinite;
   
 }
@@ -269,282 +261,7 @@ textarea {
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/trash.css');
 @import url('https://unpkg.com/css.gg@2.0.0/icons/css/copy.css');
 
-@media screen and (max-width: 700px){
-
-body {
-  /* height: 100vh;
-  width: 100vw;
-  display: flex; */
-  flex-direction: row;
-  align-items: center;
-  /* justify-content: center;
-  font-family: var(--fontPoppins); */
-}
-
-.background {
-  /* height: 100vh;
-  width: 100vw;
-  border-radius: 15px; */
-  /* background-image: url('./image/ximage.jpg');
-  background-repeat: none;
-  background-size:cover; */
-  position: fixed; 
-  
-  /* opacity: 0.5;  
-  position: relative; */
-}
-/* 
-.mask {
-  height: 100%;
-  width: 100%;
-  backdrop-filter: blur(4px);  
-  background-color: rgba(240, 248, 255, 0.184)
-} */
-
-.container {
-  /* position: absolute; */
-  top:1%;
-  left: 1.5%;
-  background-color: rgba(255, 0, 0, 0.278) !important;
-  padding: 2px;
-  flex-direction: column;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  height: 98%;
-  width: 97%;
-  /* background-color: transparent;
-  border: 3px solid var(--appWhite);
-  border-radius: 15px;
-  opacity: none;
-  flex: 1; */
-}
-
-.logo {
-  /* position: absolute; */
-  top: 5px;
-  left: 5px;
-  /* background-color: rgba(255, 255, 255, 0.726); */
-  height: 25px;
-  width: 25px;
-  /* border-radius: 50%; */
-  padding: 2px;
-}
-
-.input-container {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around; */
-  height: 90%;
-  width: 87%;
-  
-  /* background-color: yellow; */
-}
-/* 
-textarea {
-  outline: none;
-} */
-
-.text-input {
-  height: 90%;
-  width: 95%;
-  margin: 2px;
-  /* background-color:  red; */
-  padding: 5px;
-  /* border: solid 1px rgba(255, 255, 255, 0.503);
-  display:flex;
-  flex-direction: inherit;
-  align-items: flex-start;
-  justify-content: flex-start;
-  font-family: var(--fontPoppins);
-  color: white;  */
-  font-size: 16px; 
-  font-weight: 600;  
-}
-
-::placeholder {
-  /* font-family: var(--fontPoppins); */
-  /* color: white; */
-  font-size: 16px; 
-  /* font-weight: bold;  */
-  
-}
-
-.button-container{
-  margin-top: 3px;
-  width: 90%;
-  /* display: flex; 
-  justify-content: space-evenly;
-  background-color: orange;  */
-}
-
-.button-encrypt,
-.button-copy {
-  /* width: min-content; */
-  /* border-radius: 50px;
-  background-color: var(--appBlack);
-  box-shadow: 5px 3px 7px white;
-  cursor: pointer;
-  font-family: var(--fontPoppins); */
-  /* font-weight: bold;
-  color: white;
-  margin-right: none; */
-  /* border: none;   */
-  font-size: 16px;
-  height: 30px;
-  padding: 0px 20px;
-}
-/* 
-.button-encrypt:hover,
-.button-copy:hover  {
-  background-color: #100006b6 ; */
-  /* color: var(--appVeige) ; */
-  /* box-shadow: none;
-} */
-
-.button-unencrypt,
-.button-delete {
-  /* width: min-content;
-  height: 35px;
-  border-radius: 50px;
-  background-color: var(--appRed);
-  box-shadow: 5px 3px 7px white;
-  cursor: pointer;
-  font-family: var(--fontPoppins);
-  font-size: large;
-  font-weight: bold;
-  color: var(--appWhite);
-  margin-left: 5px;
-  border: none;
-  padding: 0px 30px; */
-  font-size: 16px;
-  height: 30px;
-  padding: 0px 20px;
-}
-
-/* .button-unencrypt:hover,
-.button-delete:hover {
-
-  box-shadow: none;
-} */
-
-.arrow-paste-container{
-  margin-top: 20px;
-  width: 100%;
-  height: 5%;
-   /* display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 0px; */
-}
-
-.arrow-paste{
-  width: 80px;
-  height: 40px;
-  flex-direction: row;
-  transition: width 500ms, heigth 500ms, background-color 500ms;
-  gap: 5px;
-}
-
-.arrow {
-  display: none;
-}
-
-.arrowup{
-  display: flex;
-}
-.arrow-paste:hover{
-  width: 84px;
-  height: 44px;
-  background-color: transparent;
-}
-
-.arrow,
-.arrowup,
-.paste {
-  height: 16px;
-  width: 16px;
-}
-
-.output-container {
-  height: 90%;
-  width: 95%;
-  margin: 2px;
-  padding: 5px;
-  font-size: 16px; 
-  font-weight: 600;
-/* 
-  background-color: blue;
-  display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* justify-content: space-around;
-  background-color: transparent; */
-  /* height: 100%;
-  width: 30%; */
-}
-
-.output-text-container {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  height: 90%;
-  width: 95%;
-}
-
-.text-output {
-  height: 90%;
-  width: 95%;
-  /* background-color: #a90041b9; */
-  padding: 5px;
-  /* border: 0px;
-  margin-bottom: 10px;
-  font-family: var(--fontPoppins);
-  color: white;  */
-  font-size: 16px; 
-  font-weight: 600;  
-  /* display: none;
-  word-break: break-word;
-  border-radius: 5px; */  
-}
-/* 
-.logo-output {
-  height: 200px;
-  animation: loader 3s alternate infinite;
-  
-} */
-/* 
-@keyframes loader {
-  0% {
-    rotate: 0deg;
-  }
-  100% {
-    border-radius: 50%;
-    rotate: 90deg;
-  }
-} */
-
-
-.github {
-  /* position: absolute; */
-  bottom: 20px;
-  right: 20px;
-  /* background-color: rgba(255, 255, 255, 0.726); */
-  height: 30px;
-  width: 30px;
-  /* border-radius: 50%;
-  padding: 5px; */
-}
-
-}
-
-
-  
-
-@media screen and (max-width: 400px){
-
+@media screen and (max-width: 800px){
   body {
     flex-direction: row;
     align-items: center;
@@ -565,11 +282,11 @@ textarea {
   }
 
   .logo {
-    top: 5px;
-    left: 5px;
-    height: 25px;
-    width: 25px;
-    padding: 2px;
+    top: 10px;
+    left: 10px;
+    height: 35px;
+    width: 35px;
+    padding: 4px;
   }
 
   .input-container {
@@ -597,16 +314,16 @@ textarea {
 
   .button-encrypt,
   .button-copy {
-    font-size: 16px;
-    height: 30px;
-    padding: 0px 20px;
+    font-size: 20px;
+    height: 35px;
+    padding: 0px 25px;
   }
 
   .button-unencrypt,
   .button-delete {
-    font-size: 16px;
-    height: 30px;
-    padding: 0px 20px;
+    font-size: 20px;
+    height: 35px;
+    padding: 0px 25px;
   }
 
   .arrow-paste-container{
@@ -617,7 +334,7 @@ textarea {
 
   .arrow-paste{
     width: 80px;
-    height: 40px;
+    height: 60px;
     flex-direction: row;
     transition: width 500ms, heigth 500ms, background-color 500ms;
     gap: 5px;
@@ -630,17 +347,18 @@ textarea {
   .arrowup{
     display: flex;
   }
+
   .arrow-paste:hover{
     width: 84px;
-    height: 44px;
+    height: 64px;
     background-color: transparent;
   }
 
   .arrow,
   .arrowup,
   .paste {
-    height: 16px;
-    width: 16px;
+    height: 20px;
+    width: 20px;
   }
 
   .output-container {
@@ -670,6 +388,45 @@ textarea {
     right: 20px;
     height: 30px;
     width: 30px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .logo {
+    top: 5px;
+    left: 5px;
+    height: 25px;
+    width: 25px;
+    padding: 2px;
+  }
+
+  .button-encrypt,
+  .button-copy {
+    font-size: 16px;
+    height: 30px;
+    padding: 0px 20px;
+  }
+
+  .button-unencrypt,
+  .button-delete {
+    font-size: 16px;
+    height: 30px;
+    padding: 0px 20px;
+  }
+
+  .arrow-paste{
+    height: 40px;
+  }
+
+  .arrow-paste:hover{
+    height: 64px;
+  }
+
+  .arrow,
+  .arrowup,
+  .paste {
+    height: 16px;
+    width: 16px;
   }
 }
 
