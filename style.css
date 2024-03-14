@@ -434,13 +434,35 @@ textarea {
 }
 
 @media screen and (max-height: 400px){
+  .input-container{
+    height: 50%;
+  }
+
   .text-input{
     width: 90%;
-    height: 50%;
+    height: 70%;
   }
 
   .logo-output {
     display: none;
   } 
+
+  .arrow-paste-container{
+    margin-top: 10px;
+    margin-bottom: 3px;
+    width: 100%;
+    height:fit-content;
+  }
+
+  .arrow-paste{
+    width: 70px;
+    height: 30px;
+    gap: 3px;
+  }
+
+
+
+
+
 }
 
