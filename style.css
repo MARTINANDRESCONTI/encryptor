@@ -114,6 +114,7 @@ textarea {
   width: 100%;
   display: flex; 
   justify-content: space-evenly; 
+  margin-top: 3px;
 }
 
 .button-encrypt,
@@ -281,10 +282,10 @@ textarea {
   }
 
   .logo {
-    top: 10px;
-    left: 10px;
-    height: 35px;
-    width: 35px;
+    top: 5px;
+    left: 5px;
+    height: 30px;
+    width: 30px;
     padding: 4px;
   }
 
@@ -327,6 +328,7 @@ textarea {
 
   .arrow-paste-container{
     margin-top: 20px;
+    margin-bottom: 5px;
     width: 100%;
     height: 5%;
   }
@@ -381,6 +383,10 @@ textarea {
     font-weight: 600;
   } 
 
+  .logo-output {
+    height: 60px;
+  }
+
   .github {
     bottom: 20px;
     right: 20px;
@@ -390,6 +396,12 @@ textarea {
 }
 
 @media screen and (max-width: 400px){
+  .text-input{
+    width: 90%;
+    height: auto;
+
+  }
+
   .logo {
     top: 5px;
     left: 5px;
@@ -399,13 +411,14 @@ textarea {
   }
 
   .button-encrypt,
-  .button-copy {
+  .button-unencrypt {
     font-size: 16px;
     height: 30px;
-    padding: 0px 20px;
+    padding: 0px 10px;
   }
 
-  .button-unencrypt,
+  
+  .button-copy,
   .button-delete {
     font-size: 16px;
     height: 30px;
@@ -418,5 +431,16 @@ textarea {
     height: 16px;
     width: 16px;
   }
+}
+
+@media screen and (max-height: 400px){
+  .text-input{
+    width: 90%;
+    height: 50%;
+  }
+
+  .logo-output {
+    display: none;
+  } 
 }
 
