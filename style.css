@@ -313,13 +313,13 @@ textarea {
   }
 
   .button-encrypt,
-  .button-copy {
+  .button-unencrypt{
     font-size: 20px;
     height: 35px;
-    padding: 0px 25px;
+    padding: 0px 18px;
   }
 
-  .button-unencrypt,
+  .button-copy,
   .button-delete {
     font-size: 20px;
     height: 35px;
